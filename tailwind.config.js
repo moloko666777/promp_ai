@@ -47,6 +47,7 @@ module.exports = {
                     '500': '#000000'
                 },
                 'white-opacity': {
+                    '0.2': 'rgba(255, 255, 255, 0.2)',
                     '0.6': 'rgba(255, 255, 255, 0.6)'
                 }
 
@@ -57,6 +58,7 @@ module.exports = {
             // },
             spacing: {
                 '14px': '0.875rem',
+                '27px': '1.688rem',
                 '34px': '2.125rem',
                 '42px': '2.625rem',
                 '55px': '3.438rem',
@@ -89,6 +91,7 @@ module.exports = {
                 'fade-out': 'fade-out 0.5s ease-out',
                 'slide-in': 'slide-in 0.5s ease-out',
                 'slide-out': 'slide-out 0.5s ease-out',
+                'pulse-slow': 'pulse 7s cubic-bezier(0.4, 0, 0.6, 1) infinite',
             },
             borderRadius: {
                 '55': '3.438rem',
@@ -121,6 +124,7 @@ module.exports = {
             },
             zIndex: {
                 '1': '1',
+                '2': '2',
             },
             transitionProperty: {
                 'menu': 'all 0.4s ease-out, background 1s ease-out',

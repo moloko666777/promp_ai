@@ -6,23 +6,55 @@
   @apply rounded-t-none;
 }
 
-
 .link-hover a {
   @apply relative block transition ease-out hover:ease-in no-underline before:content-[''] before:absolute before:left-0 before:-bottom-[3px] before:w-0 before:h-[1px] before:bg-white-500 hover:before:w-full before:transition-[width_0.40s];
 }
 
-//.button-white {
-//  @apply h-[52px] bg-white-500 text-black-500  hover:bg-transparent hover:text-white-500 hover:border-white-500 hover:border-solid hover:border  px-34px py-14px rounded-55 border-solid border border-white-500  transition ease-out hover:ease-in;
-//}
-//.button-border {
-//  @apply bg-black-500 text-white-500 leading-none hover;
-//}
-//.button-border {
-//  @apply h-[52px] flex items-center gap-2 bg-transparent text-white-500  hover:text-black-500 hover:bg-white-500 border border-white-500  px-34px py-14px rounded-55 border-solid transition ease-out hover:ease-in [&>svg]:fill-current hover:[&>svg]:fill-black";
-//}
-//.button-border svg {
-//  @apply fill-white-500 hover:fill-black-500 ;
-//}
+.button-white {
+  @apply bg-white-500 text-black-500  hover:bg-transparent hover:text-white-500 hover:border-white-500 hover:border-solid hover:border px-4 py-3 md:px-34px md:py-14px rounded-55 border-solid border border-white-500  transition ease-out hover:ease-in
+}
+
+.button-border {
+  @apply flex items-center gap-2 bg-transparent text-white-500  hover:text-black-500 hover:bg-white-500 border border-white-500 px-4 py-3 md:px-34px md:py-14px rounded-55 border-solid transition ease-out;
+}
+
+@mixin xs {
+  @media (max-width: 639px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: 640px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: 1280px) and (max-width: 1535px) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: 1536px) {
+    @content;
+  }
+}
+
+
 .header {
   position: fixed;
   display: block;
@@ -237,3 +269,72 @@
 .menu-open .icon-container #menuicon .bar.bar2 {
   transform: translateY(3px) rotate(-45deg);
 }
+
+
+.star {
+  position: absolute;
+
+  &:nth-child(1) {
+    top: 15%;
+    left: 6%;
+    @include xs {
+      top: 5%;
+      left: 15%;
+    }
+
+  }
+
+  &:nth-child(2) {
+    top: 20%;
+    left: 30%;
+    @include xs {
+      top: 12%;
+      left: 35%;
+    }
+  }
+
+  &:nth-child(3) {
+    top: 45%;
+    left: 20%;
+    @include xs {
+      top: 38%;
+      left: 8%;
+    }
+  }
+
+  &:nth-child(4) {
+    top: 80%;
+    left: 6%;
+    @include xs {
+      top: 69%;
+      left: 20%;
+    }
+  }
+
+  &:nth-child(5) {
+    bottom: -3%;
+    left: 35%;
+    @include xs {
+      bottom: 4%;
+      left: 35%;
+    }
+  }
+
+  &:nth-child(6) {
+    top: 20%;
+    right: 30%;
+  }
+
+  &:nth-child(7) {
+    top: 40%;
+    right: 5%;
+  }
+
+  &:nth-child(8) {
+    bottom: 15%;
+    right: 11%;
+  }
+}
+
+
+
