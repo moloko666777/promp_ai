@@ -1,5 +1,5 @@
 // import gsap from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap, ScrollTrigger } from 'gsap/all';
 
 // Регистрируем плагин ScrollTrigger
 // gsap.registerPlugin(ScrollTrigger);
@@ -94,3 +94,159 @@
 //         ease: "power2.in"
 //     });
 // }
+
+//
+// const rows = document.querySelectorAll(".cb-tagreel-row");
+// const rowsFrom = document.querySelectorAll(".cb-tagreel-row-from");
+//
+// rows.forEach(function (e, i) {
+//     let row_width = e.getBoundingClientRect().width;
+//     let row_item_width = e.children[0].getBoundingClientRect().width;
+//     let initial_offset = ((2 * row_item_width) / row_width) * 100 * -1;
+//     let x_translation = initial_offset * -1;
+//     // console.log(e.children[0].clientWidth);
+//     console.log(x_translation);
+//
+//     gsap.set(e, {
+//         xPercent: `${initial_offset}`
+//     });
+//
+//     // let duration = 5 * (i + 1);
+//
+//     let tl = gsap.timeline();
+//
+//     tl.to(e, {
+//         ease: "none",
+//         duration: 9,
+//         xPercent: 0,
+//         repeat: -1
+//     });
+// });
+//
+// rowsFrom.forEach(function (e, i) {
+//     let row_width = e.getBoundingClientRect().width;
+//     let row_item_width = e.children[0].getBoundingClientRect().width;
+//     let initial_offset = ((2 * row_item_width) / row_width) * 100 * -1;
+//     let x_translation = initial_offset * -1;
+//     // console.log(e.children[0].clientWidth);
+//     console.log(x_translation);
+//
+//     gsap.set(e, {
+//         xPercent: `${initial_offset}`
+//     });
+//
+//
+//     let tl = gsap.timeline();
+//
+//     tl.from(e, {
+//         ease: "none",
+//         duration: 9,
+//         xPercent: 0,
+//         repeat: -1
+//     });
+// });
+
+
+
+// Находим все контейнеры marquee на странице
+// const marqueeContainers = document.querySelectorAll('.marquee-container');
+//
+// // Обрабатываем каждый контейнер отдельно
+// marqueeContainers.forEach(marqueeContainer => {
+//     // Находим контент внутри текущего контейнера
+//     const marqueeContent = marqueeContainer.querySelector('.marquee-content');
+//
+//     const contentWidth = marqueeContent.offsetWidth;
+//     const containerWidth = marqueeContainer.offsetWidth;
+//
+//     // Клонируем контент для текущего контейнера
+//     let totalContentWidth = contentWidth;
+//     while (totalContentWidth < containerWidth + contentWidth) {
+//         const clone = marqueeContent.cloneNode(true);
+//         marqueeContainer.appendChild(clone);
+//         totalContentWidth += contentWidth;
+//     }
+//
+//     // Собираем все элементы контента внутри текущего контейнера
+//     const contents = marqueeContainer.querySelectorAll('.marquee-content');
+//
+//     contents.forEach(content => {
+//         gsap.to(content, {
+//             x: `-=${content.offsetWidth}`,
+//             duration: 20,
+//             ease: "none",
+//             repeat: -1,
+//             modifiers: {
+//                 x: gsap.utils.unitize(x => parseFloat(x) % content.offsetWidth)
+//             }
+//         });
+//
+//         content.addEventListener('mouseenter', () => {
+//             gsap.to(content, { timeScale: 0.2 });
+//         });
+//
+//         content.addEventListener('mouseleave', () => {
+//             gsap.to(content, { timeScale: 1 });
+//         });
+//     });
+// });
+
+const rows = document.querySelectorAll(".cb-tagreel-row")
+
+rows.forEach(function (e, i) {
+    let row_width = e.getBoundingClientRect().width;
+    let row_item_width = e.children[0].getBoundingClientRect().width;
+    console.log('row_item_width', row_item_width)
+    let initial_offset = ((2 * row_item_width) / row_width) * 50 * -1;
+    console.log('initial_offset', initial_offset);
+    let x_translation = initial_offset * -1;
+    // console.log(e.children[0].clientWidth);
+    console.log(x_translation);
+
+
+
+    gsap.set(e, {
+        xPercent: `${initial_offset}`
+    });
+
+    // let duration = 5 * (i + 1);
+
+    let tl = gsap.timeline();
+
+    tl.to(e, {
+        ease: "none",
+        duration: 15,
+        xPercent: 0,
+        repeat: -1
+    });
+});
+
+const rowsFrom = document.querySelectorAll(".cb-tagreel-row-from")
+
+rowsFrom.forEach(function (e, i) {
+    let row_width = e.getBoundingClientRect().width;
+    let row_item_width = e.children[0].getBoundingClientRect().width;
+    console.log('row_item_width', row_item_width)
+    let initial_offset = ((2 * row_item_width) / row_width) * 50 * -1;
+    console.log('initial_offset', initial_offset);
+    let x_translation = initial_offset * -1;
+    // console.log(e.children[0].clientWidth);
+    console.log(x_translation);
+
+
+
+    gsap.set(e, {
+        xPercent: `${initial_offset}`
+    });
+
+    // let duration = 5 * (i + 1);
+
+    let tl = gsap.timeline();
+
+    tl.from(e, {
+        ease: "none",
+        duration: 15,
+        xPercent: 0,
+        repeat: -1
+    });
+});
