@@ -23,6 +23,8 @@ const logSymbols = require("log-symbols"); //For Symbolic Console logs :) :P
 const includePartials = require("gulp-file-include"); //For supporting partials if required
 const esbuild = require('gulp-esbuild');
 const surge = require('gulp-surge'); // Add this near other requires at the top
+const webp = require('gulp-webp'); // For converting images to WebP
+const replace = require('gulp-replace'); // For replacing image paths in HTML
 
 function livePreview(done) {
   browserSync.init({
@@ -79,9 +81,10 @@ function devScripts() {
 }
 
 function devImages() {
-  return src(`${options.paths.src.img}/**/*`).pipe(
-    dest(options.paths.dist.img)
-  );
+  return src(`${options.paths.src.img}/**/*`)
+    .pipe(dest(options.paths.dist.img))
+    .pipe(webp()) // Convert to WebP for development too
+    .pipe(dest(options.paths.dist.img)); // Save WebP versions in the same directory
 }
 
 function devFonts() {
@@ -128,6 +131,7 @@ function devClean() {
 function prodHTML() {
   return src(`${options.paths.src.base}/**/*.{html,php}`)
     .pipe(includePartials())
+    .pipe(replace(/\.(png|jpg|jpeg)(?=["'])/g, '.webp')) // Replace image extensions with .webp
     .pipe(dest(options.paths.build.base));
 }
 
@@ -182,7 +186,9 @@ function prodImages() {
 
   return src(options.paths.src.img + "/**/*")
     .pipe(imagemin([...plugins]))
-    .pipe(dest(options.paths.build.img));
+    .pipe(dest(options.paths.build.img))
+    .pipe(webp()) // Convert to WebP
+    .pipe(dest(options.paths.build.img)); // Save WebP versions in the same directory
 }
 
 function prodFonts() {

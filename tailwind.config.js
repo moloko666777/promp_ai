@@ -59,11 +59,13 @@ module.exports = {
             spacing: {
                 '10px': '0.625rem',
                 '14px': '0.875rem',
+                '18px': '1.125rem',
                 '26px': '1.625rem',
                 '27px': '1.688rem',
                 '34px': '2.125rem',
                 '30px': '1.875rem',
                 '42px': '2.625rem',
+                '43px': '2.688rem',
                 '55px': '3.438rem',
                 '124px': '7.75rem',
                 '5.5': '1.375rem',
@@ -98,6 +100,7 @@ module.exports = {
                 'pulse-slow': 'pulse 7s cubic-bezier(0.4, 0, 0.6, 1) infinite',
             },
             borderRadius: {
+                '7': '.438rem',
                 '55': '3.438rem',
             },
             keyframes: {

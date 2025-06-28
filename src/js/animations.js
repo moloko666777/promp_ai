@@ -196,12 +196,12 @@ const rows = document.querySelectorAll(".cb-tagreel-row")
 rows.forEach(function (e, i) {
     let row_width = e.getBoundingClientRect().width;
     let row_item_width = e.children[0].getBoundingClientRect().width;
-    console.log('row_item_width', row_item_width)
+    // console.log('row_item_width', row_item_width)
     let initial_offset = ((2 * row_item_width) / row_width) * 50 * -1;
-    console.log('initial_offset', initial_offset);
+    // console.log('initial_offset', initial_offset);
     let x_translation = initial_offset * -1;
     // console.log(e.children[0].clientWidth);
-    console.log(x_translation);
+    // console.log(x_translation);
 
 
 
@@ -226,12 +226,8 @@ const rowsFrom = document.querySelectorAll(".cb-tagreel-row-from")
 rowsFrom.forEach(function (e, i) {
     let row_width = e.getBoundingClientRect().width;
     let row_item_width = e.children[0].getBoundingClientRect().width;
-    console.log('row_item_width', row_item_width)
     let initial_offset = ((2 * row_item_width) / row_width) * 50 * -1;
-    console.log('initial_offset', initial_offset);
     let x_translation = initial_offset * -1;
-    // console.log(e.children[0].clientWidth);
-    console.log(x_translation);
 
 
 

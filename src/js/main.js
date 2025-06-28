@@ -1,5 +1,5 @@
 import Lenis from 'lenis';
-import { initAnimations } from './animations';
+import {initAnimations} from './animations';
 
 window.addEventListener("DOMContentLoaded", () => {
     const lenis = new Lenis({
@@ -23,14 +23,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
     // initAnimations();
 
-    console.log("Lenis and GSAP animations initialized");
+    // console.log("Lenis and GSAP animations initialized");
 });
 
 
-    const header = document.querySelector('.header');
-    const headerLogo = document.querySelector('.header__logo');
-    const icon = document.querySelector('.icon-container');
-    icon.onclick = function () {
-        header.classList.toggle('menu-open');
-        headerLogo.classList.toggle('center__logo');
-    }
+const header = document.querySelector('.header');
+const headerLogo = document.querySelector('.header__logo');
+const icon = document.querySelector('.icon-container');
+icon.onclick = function () {
+    header.classList.toggle('menu-open');
+    headerLogo.classList.toggle('center__logo');
+}
