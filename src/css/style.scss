@@ -7,7 +7,7 @@
 }
 
 .link-hover a {
-  @apply relative block transition ease-out hover:ease-in no-underline before:content-[''] before:absolute before:left-0 before:-bottom-[3px] before:w-0 before:h-[1px] before:bg-white-500 hover:before:w-full before:transition-[width_0.40s];
+  @apply relative block transition ease-out hover:ease-in no-underline before:content-[''] before:absolute before:left-0 before:-bottom-[3px] before:w-0 before:h-[1px] before:bg-white-500 hover:before:w-full before:transition-[width_0.40s] w-max;
 }
 
 .button-white {

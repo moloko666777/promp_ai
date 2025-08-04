@@ -61,6 +61,7 @@ module.exports = {
             //     '3xs': ['0.5rem', {lineHeight: '0.625rem'}],
             // },
             spacing: {
+                '6px': '0.375rem',
                 '10px': '0.625rem',
                 '14px': '0.875rem',
                 '15px': '0.938rem',
@@ -155,6 +156,10 @@ module.exports = {
             backgroundColor: {
                 'black-rgba': 'rgba(5, 5, 5, 0.01)', // Кастомный фон
             },
+            rotate: {
+                '180': '180deg',
+                '360': '360deg',
+            }
         },
     },
     plugins: [
