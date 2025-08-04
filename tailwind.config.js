@@ -71,10 +71,15 @@ module.exports = {
                 '30px': '1.875rem',
                 '42px': '2.625rem',
                 '43px': '2.688rem',
+                '52px': '3.25rem',
                 '55px': '3.438rem',
+                '58px': '3.625rem',
                 '60px': '3.75rem',
                 '61px': '3.813rem',
+                '108px': '6.75rem',
                 '124px': '7.75rem',
+                '218px': '13.625rem',
+                '221px': '13.813rem',
                 '5.5': '1.375rem',
                 '6.5': '1.625rem',
             },
@@ -108,6 +113,7 @@ module.exports = {
             },
             borderRadius: {
                 '7': '.438rem',
+                '10px': '.625rem',
                 '55': '3.438rem',
             },
             keyframes: {
