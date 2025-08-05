@@ -54,7 +54,7 @@
   }
 }
 .title {
-  @apply mb-124px;
+  @apply mb-60px xl:mb-124px;
 }
 .title h2 {
   @apply text-center text-white-500 font-man font-medium text-4xl md:text-5xl mb-7;
@@ -395,4 +395,17 @@
   position: relative;
   display: inline-block;
   z-index: 1;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, #000000, #3b3b3b, #777777, #b9b9b9, #ffffff);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #000000, #3b3b3b, #777777, #b9b9b9, #ffffff);
+  border-radius: 8px;
 }
